@@ -91,6 +91,31 @@ class CUtilisateur
 }
 
 
+public function inscrireUtilisateur($bdd,$oUtilisateur)
+{
+	$num = $oUtilisateur->getNum();
+	$nom = $oUtilisateur->getNom();
+	$laboratoire = $oUtilisateur->getLaboratoire();
+	$medecin1 = intval($oUtilisateur->getMedecin1());
+	$datedebut = $oUtilisateur->getDatedebut();
+	$datefin = $oUtilisateur->getDatefin();
+	$description = $oUtilisateur->getDescription();
+
+try
+{
+	$req = $bdd->prepare("INSERT INTO projet(numProjet,nomProjet,laboratoireProjet,medecin1,debutProjet,finProjet,descriptionProjet) VALUES ('" . $num . "','" . $nom . "','" . $laboratoire . "','" . $medecin1 . "','" . $datedebut . "','" . $datefin . "','" . $description . "');" );
+	$req->execute();
+	echo "<div class=\"form-group\"><center><div class=\"col-md-4\"><div class=\"alert alert-success\">
+        Projet ajouté ! Il commencera bien le " . $datedebut . " et finira normalement le " . $datefin . ", vous pouvez le repousser à tout moment en cliquant ci-dessous.
+    </div></div></center></div>" ;
+}
+
+catch (Exception $e) 
+	{
+		die('Erreur : ' . $e->getMessage());
+	}
+}
+
 
 class CUtilisateurs
 {
