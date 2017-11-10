@@ -116,7 +116,7 @@ if(!isset($_SESSION['utilisateur']))
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="ville">Ville</label>  
+  <label class="col-md-4 control-label" for="ville">Villeeeee</label>  
   <div class="col-md-4">
   <input id="ville" name="ville" type="text"  class="form-control input-md" required="">
     
