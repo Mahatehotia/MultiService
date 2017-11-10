@@ -10,8 +10,10 @@ class CUtilisateur
 	private $prenom;
 	private $login;
 	private $mdp;
+	private $mail;
 	private $adresse;
-	private $email;
+	private $cp;
+	private $ville;
 	private $role;
 	private $trouve;
 
@@ -23,15 +25,17 @@ class CUtilisateur
 	}
 
 
-	public function connexion($sid,$snom,$sprenom,$slogin,$smdp,$sadresse,$smail,$srole)
+	public function connexion($sid,$snom,$sprenom,$slogin,$smdp,$smail,$sadresse,$scp,$sville,$srole)
 	{
 		$this->id = $sid;
 		$this->nom = $snom;
 		$this->prenom = $sprenom;
 		$this->login = $slogin;
 		$this->mdp = $smdp;
+		$this->mail = $smail;
 		$this->adresse = $sadresse;
-		$this->email = $semail;
+		$this->cp = $scp;
+		$this->ville = $sville;
 		$this->role = $srole;
 		$this->trouve = true;
 	}
@@ -43,8 +47,10 @@ class CUtilisateur
 		$this->prenom = $sprenom;
 		$this->login = $slogin;
 		$this->mdp = $smdp;
+		$this->mail = $smail;
 		$this->adresse = $sadresse;
-		$this->email = $semail;
+		$this->cp = $scp;
+		$this->ville = $sville;
 		$this->role = $srole;
 	}
 
@@ -73,40 +79,52 @@ class CUtilisateur
 		return $this->mdp;
 	}
 
+	public function getMail()
+	{
+		return $this->mail;
+	}
+
 	public function getAdresse()
 	{
 		return $this->adresse;
 	}
 
-	public function getEmail()
+	public function getCp()
 	{
-		return $this->email;
+		return $this->cp;
 	}
+
+	public function getVille()
+	{
+		return $this->ville;
+	}	
 
 	public function getRole()
 	{
 		return $this->role;
 	}
 
-}
+
 
 
 public function inscrireUtilisateur($bdd,$oUtilisateur)
 {
-	$num = $oUtilisateur->getNum();
 	$nom = $oUtilisateur->getNom();
-	$laboratoire = $oUtilisateur->getLaboratoire();
-	$medecin1 = intval($oUtilisateur->getMedecin1());
-	$datedebut = $oUtilisateur->getDatedebut();
-	$datefin = $oUtilisateur->getDatefin();
-	$description = $oUtilisateur->getDescription();
+	$prenom = $oUtilisateur->getPrenom();
+	$login = $oUtilisateur->getLogin();
+	$mdp = $oUtilisateur->getMdp();
+	$mail = $oUtilisateur->getMail();
+	$adresse = $oUtilisateur->getAdresse();
+	$cp = $oUtilisateur->getCp();
+	$ville = $oUtilisateur->getVille();
+	$role = $oUtilisateur->getRole();
 
 try
 {
-	$req = $bdd->prepare("INSERT INTO projet(numProjet,nomProjet,laboratoireProjet,medecin1,debutProjet,finProjet,descriptionProjet) VALUES ('" . $num . "','" . $nom . "','" . $laboratoire . "','" . $medecin1 . "','" . $datedebut . "','" . $datefin . "','" . $description . "');" );
+	$req = $bdd->prepare("INSERT INTO utilisateurs(nomUtilisateur,prenomUtilisateur,loginUtilisateur,mdpUtilisateur,mailUtilisateur,adresseUtilisateur,cpUtilisateur,villeUtilisateur,roleUtilisateur) VALUES ('" . $nom . "','" . $prenom . "','" . $login . "','" . $mdp . "','" . $mail . "','" . $adresse . "','" . $cp . "','" . $ville . "','" . $role . "');" );
 	$req->execute();
 	echo "<div class=\"form-group\"><center><div class=\"col-md-4\"><div class=\"alert alert-success\">
-        Projet ajouté ! Il commencera bien le " . $datedebut . " et finira normalement le " . $datefin . ", vous pouvez le repousser à tout moment en cliquant ci-dessous.
+        Utilisateur inscrit ! 
     </div></div></center></div>" ;
 }
 
@@ -114,6 +132,8 @@ catch (Exception $e)
 	{
 		die('Erreur : ' . $e->getMessage());
 	}
+}
+
 }
 
 
