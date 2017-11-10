@@ -1,5 +1,5 @@
 <?php 
-//require_once '_includes/head.php'; //inclut les liens vers les bibliotheque
+require_once '_includes/head.php'; //inclut les liens vers les bibliotheque
 require_once 'classes/CUtilisateur.php';
 // Si il ny a pas de session instancier on linstancie
 if(!isset($_SESSION['utilisateur']))
