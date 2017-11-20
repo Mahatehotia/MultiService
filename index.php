@@ -147,7 +147,7 @@ if(!isset($_SESSION['utilisateur']))
 // L'utilisateur est déjà connecté
 elseif (isset($_SESSION['utilisateur'])) {
 	
-	echo 'Bienvenu ' . var_dump($_SESSION['utilisateur']);
+	echo 'Bienvenue ' . var_dump($_SESSION['utilisateur']);
 	include '_includes/menu.php';
 }
 
