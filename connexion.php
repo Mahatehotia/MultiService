@@ -18,7 +18,7 @@ $requ = $connexion->query("SELECT * FROM utilisateurs WHERE loginUtilisateur =\"
 		$res[]=$requ->fetch();
 		
 		$_SESSION['utilisateur'] = new CUtilisateur();
-		$_SESSION['utilisateur']->connexion($res['idUtilisateur'],$res['nomUtilisateur'],$res['prenomUtilisateur'],$res['loginUtilisateur'],$res['mdpUtilisateur'],$res['adresseUtilisateur'],$res['emailUtilisateur'],$res['roleUtilisateur']);
+		$_SESSION['utilisateur']->connexion($res['idUtilisateur'],$res['nomUtilisateur'],$res['prenomUtilisateur'],$res['loginUtilisateur'],$res['mdpUtilisateur'],$res['adresseUtilisateur'],$res['mailUtilisateur'],$res['adresseUtilisateur'],$res['cpUtilisateur'],$res['villeUtilisateur'],$res['roleUtilisateur']);
 		header('location:index.php');
 
 	}
