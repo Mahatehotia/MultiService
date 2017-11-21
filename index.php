@@ -1,4 +1,7 @@
 <?php
+include 'html/presentation.php';
+?>
+<?php
 require('_includes/verification.php');
 
 
