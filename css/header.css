@@ -1,0 +1,13 @@
+/* Full height image header */
+.background {
+    background-position: center;
+    background-size: cover;
+    background-image: url("../_images/background.jpg");
+    min-height: 100%;
+}
+.espaceVide{
+    height: 500px;
+}
+.navbar{
+    background-color: white;
+}
