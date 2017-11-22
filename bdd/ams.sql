@@ -7,6 +7,13 @@
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
+
+DROP TABLE IF EXISTS ligne_commander;
+DROP TABLE IF EXISTS commandes;
+DROP TABLE IF EXISTS produits;
+DROP TABLE IF EXISTS utilisateurs;
+
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -21,7 +28,6 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
-
 --
 -- Structure de la table `commandes`
 --
