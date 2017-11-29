@@ -5,7 +5,7 @@
 */
 class CUtilisateur
 {
-	private $id = 0;
+	private $id;
 	private $nom;
 	private $prenom;
 	private $login;
@@ -17,42 +17,6 @@ class CUtilisateur
 	private $role;
 	private $trouve;
 
-
-	public function __construct()
-	{
-		$this->trouve = false;
-		
-	}
-
-
-	public function connexion($sid,$snom,$sprenom,$slogin,$smdp,$smail,$sadresse,$scp,$sville,$srole)
-	{
-		$this->id = $sid;
-		$this->nom = $snom;
-		$this->prenom = $sprenom;
-		$this->login = $slogin;
-		$this->mdp = $smdp;
-		$this->mail = $smail;
-		$this->adresse = $sadresse;
-		$this->cp = $scp;
-		$this->ville = $sville;
-		$this->role = $srole;
-		$this->trouve = true;
-	}
-
-	public function objetSetId($sid,$snom,$sprenom,$slogin,$smdp,$sadresse,$smail,$srole)
-	{
-		$this->id = $sid;
-		$this->nom = $snom;
-		$this->prenom = $sprenom;
-		$this->login = $slogin;
-		$this->mdp = $smdp;
-		$this->mail = $smail;
-		$this->adresse = $sadresse;
-		$this->cp = $scp;
-		$this->ville = $sville;
-		$this->role = $srole;
-	}
 
 	public function getId()
 	{
@@ -107,6 +71,46 @@ class CUtilisateur
 
 
 
+	public function __construct()
+	{
+		$this->trouve = false;
+		
+	}
+
+
+	public function connexion($sid,$snom,$sprenom,$slogin,$smdp,$smail,$sadresse,$scp,$sville,$srole)
+	{
+		$this->id = $sid;
+		$this->nom = $snom;
+		$this->prenom = $sprenom;
+		$this->login = $slogin;
+		$this->mdp = $smdp;
+		$this->mail = $smail;
+		$this->adresse = $sadresse;
+		$this->cp = $scp;
+		$this->ville = $sville;
+		$this->role = $srole;
+		$this->trouve = true;
+	}
+
+	public function objetSetId($sid,$snom,$sprenom,$slogin,$smdp,$smail,$sadresse,$scp,$sville,$srole)
+	{
+		$this->id = $sid;
+		$this->nom = $snom;
+		$this->prenom = $sprenom;
+		$this->login = $slogin;
+		$this->mdp = $smdp;
+		$this->mail = $smail;
+		$this->adresse = $sadresse;
+		$this->cp = $scp;
+		$this->ville = $sville;
+		$this->role = $srole;
+	}
+
+
+
+
+
 public function inscrireUtilisateur($bdd,$oUtilisateur)
 {
 	$nom = $oUtilisateur->getNom();
@@ -152,7 +156,7 @@ private function __construct($bdd)
 		{
 
 			$oUtilisateur = new CUtilisateur();
-			$oUtilisateur->objetSetId($res['idUtilisateur'],$res['nomUtilisateur'],$res['prenomUtilisateur'],$res['loginUtilisateur'],$res['mdpUtilisateur'],$res['adresseUtilisateur'],$res['emailUtilisateur'],$res['roleUtilisateur']);
+			$oUtilisateur->objetSetId($res['idUtilisateur'],$res['nomUtilisateur'],$res['prenomUtilisateur'],$res['loginUtilisateur'],$res['mdpUtilisateur'],$res['emailUtilisateur'],$res['adresseUtilisateur'],$res['cpUtilisateur'],$res['villeUtilisateur'],$res['roleUtilisateur']);
 			$this->oCollUtilisateur[] = $oUtilisateur;
 		}
 

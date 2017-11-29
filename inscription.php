@@ -23,3 +23,9 @@ $oUtilisateur->inscrireUtilisateur($bdd,$oUtilisateur);
 </body>
 </html>
  <br><br>
+ <h2>Vous allez être redirigé(e) dans 5 secondes</h2>
+
+ <?php
+
+ header("refresh:5; url=index.php");    
+ ?>

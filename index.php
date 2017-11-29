@@ -1,14 +1,15 @@
 <?php
-include 'html/presentation.php';
-?>
-<?php
 require('_includes/verification.php');
+?>
+
+<?php
+include 'html/presentation.php';
 
 
 // Si il ny a pas de session instancier on linstancie
 if(!isset($_SESSION['utilisateur']))
 {
-  echo 'pas de sesion donc formulaire de connexion apparait';
+  echo 'pas de session donc formulaire de connexion apparait';
 
 ?>
 
@@ -150,7 +151,7 @@ if(!isset($_SESSION['utilisateur']))
 // L'utilisateur est déjà connecté
 elseif (isset($_SESSION['utilisateur'])) {
 	
-	echo 'Bienvenue ' . var_dump($_SESSION['utilisateur']);
+	echo 'Bienvenue ' . $_SESSION['utilisateur']->getPrenom() . " " . strtoupper($_SESSION['utilisateur']->getNom());
 	include '_includes/menu.php';
 }
 

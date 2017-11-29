@@ -22,9 +22,9 @@ $(this).siblings(".sousmenu").toggleClass('hide');
         <div class="row">
             <div class="col-md-3 col-sm-4 sidebar3">
 
-                <div class="name">
-                    <p><?php echo $_SESSION['utilisateur']->getNom() . " " . $_SESSION['utilisateur']->getPrenom();  ?></p>
-                    <p><?php echo $_SESSION['utilisateur']->getRole(); ?></p>
+                 <div class="name">
+                    <p><?php //echo $_SESSION['utilisateur']->getNom() . " " . $_SESSION['utilisateur']->getPrenom();  ?></p>
+                    <p><?php //echo $_SESSION['utilisateur']->getRole(); ?></p>
                 </div>
             </div>
         </div>
@@ -36,22 +36,18 @@ $(this).siblings(".sousmenu").toggleClass('hide');
                         <?php 
                         if($_SESSION['utilisateur']->getRole() == "0")
                         {
-                            ?>
-                            <li>Vous n'êtes qu'un utilisateur lambda</li>
-                            
-
-                            <?php 
+                        
+                            echo '<li>Vous n\'êtes qu\'un utilisateur lambda</li>';
+                                                    
                         }
-                        ?>
+                        
 
-                        <?php 
+                        
                         if($_SESSION['utilisateur']->getRole() == "1")
                         {
-                            ?>
-                            <li>Vous faites partis des administrateurs</li>
-                            
-
-                            <?php 
+                           
+                            echo '<li>Vous faites partis des administrateurs</li>';
+                                                  
                         }
                         ?>
                         
