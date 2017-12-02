@@ -68,6 +68,9 @@ class CUtilisateur
 		return $this->role;
 	}
 
+	public function isConnected(){
+	    return $this->trouve;
+    }
 
 
 

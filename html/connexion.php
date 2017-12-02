@@ -2,12 +2,11 @@
 /**
  * Created by PhpStorm.
  * User: mahatehotia
- * Date: 02/12/17
- * Time: 09:36
+ * Date: 21/11/17
+ * Time: 22:09
  */
-/*require('/MultiService/_includes/verification.php');*/
+require('../_includes/verification.php');
 include 'header.php';
-
 ?>
 
 <form class="form-horizontal" method="post" action="/MultiService/connexion.php">

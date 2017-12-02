@@ -5,16 +5,15 @@
  * Date: 21/11/17
  * Time: 22:09
  */
-include_once 'header.php';
+//require ('../_includes/verification.php');
+include 'header.php';
 ?>
-
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
             <h1>Bienvenue à AMS</h1>
-            <h2>Solution de nettoyage industrielle</h2>
-
-            <p>Bonjour et bienvenue dans votre magasin Ouverture Prochaine - Boulanger Bourg en Bresse ; espace convivial de découverte, de démonstration et de conseils.
+            <h2>Solution de nettoyage industriel</h2>
+            <p>Bonjour et bienvenue dans votre société de Service de nettoyage indusmagasin Ouverture Prochaine - Boulanger Bourg en Bresse ; espace convivial de découverte, de démonstration et de conseils.
 
             Retrouvez, dans votre magasin Boulanger situé à Bourg-en-Bresse , une large sélection de lave-linge, sèche-linge, lave-vaisselle, four, hotte, robot, aspirateur, TV, home-cinéma, PC, tablette, appareil photo, smartphone, et bien d'autres produits.
 

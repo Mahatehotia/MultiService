@@ -1,6 +1,6 @@
 <?php 
-require_once '/MultiService_includes/head.php'; //inclut les liens vers les bibliotheque
-require_once '/MultiService/classes/CUtilisateur.php';
+require_once 'head.php'; //inclut les liens vers les bibliotheque
+require_once '../classes/CUtilisateur.php';
 // Si il ny a pas de session instancier on linstancie
 if(!isset($_SESSION['utilisateur']))
 {
@@ -11,7 +11,7 @@ if(!isset($_SESSION['utilisateur']))
 //Si une session est en cours on affiche le menu + le code
 else
 {  
-include_once ('/MultiService/_includes/menu.php');
+include_once ('menu.php');
 }
 
 ?>

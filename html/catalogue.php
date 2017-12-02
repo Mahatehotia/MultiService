@@ -1,11 +1,7 @@
 <?php
-include_once 'header.php';
-/**
- * Created by PhpStorm.
- * User: mahatehotia
- * Date: 21/11/17
- * Time: 20:59
- */?>
+require('../_includes/verification.php');
+include 'header.php';
+?>
 <div class="container">
 <div class="row">
 

@@ -2,7 +2,7 @@
 
  ?>
 <head>
-           <link rel="stylesheet" href="css/menu.css" >
+           <link rel="stylesheet" href="../css/menu.css" >
 
     
 <script type="text/javascript">

@@ -1,6 +1,8 @@
 <?php
-include_once 'header.php';
-?><div class="container">
+require('../_includes/verification.php');
+include 'header.php';
+?>
+<div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="well well-sm">

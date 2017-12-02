@@ -1,26 +1,31 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <title>AMultiService</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost/MultiService/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="http://localhost/MultiService/css/header.css">
-</head>
+<?php
+include '../_includes/head.php';
+require_once'../_includes/verification.php';
+?>
 <body>
-<div class="background">
+    <div class="background">
     <nav class="navbar navbar-light navBg">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/MultiService/html/accueil.php">AMS</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="connexion.php"><i class="fa fa-sign-in" aria-hidden="true"></i></span> Connexion</a></li>
+               <?php
+               if(!isset($_SESSION['utilisateur'])){
+                ?>
+                    <li><a href="connexion.php"><i class="fa fa-sign-in" aria-hidden="true"></i></span> Connexion</a></li>
+                <?php
+               } else {
+                ?>
+                     <li><a href="../deconnexion.php"><i class="fa fa-sign-out" aria-hidden="true"></i></span> Déconnexion</a></li>
+                <?php
+               }
+                ?>
             </ul>
         </div>
     </nav>
-    <div class="espaceVide"></div>
+    <div class="espaceVide">
+    </div>
     <nav class="navbar navbar-light navBg fixed">
         <div class="container-fluid">
 
