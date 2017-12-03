@@ -20,7 +20,7 @@ include 'header.php';
                 Retrouvez, dans notre catalogue une large sélection de service, et bientôt une boutique fera son apparition.<br>
 
                 N'hésitez pas à nous contacter via la page de contact et on vous répondra le plus rapidement possible.<br>
-                Votre directeur de Cédric DUPONT.
+                Votre directeur Cédric DUPONT.
             </p>
         </div>
     </div>

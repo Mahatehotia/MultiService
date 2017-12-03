@@ -1,4 +1,6 @@
 <?php
+require '../classes/function.php';
+
 try
 {
     // On se connecte à MySQL
@@ -17,12 +19,12 @@ $reponse = $bdd->query('SELECT * FROM catalogue');
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-lg-5 col-sm-5"></div>
+        <div class="col-lg-4 col-sm-4"></div>
 
-        <div class="col-lg-2 col-sm-2">
-            <strong>Votre catalogue</strong>
+        <div class="col-lg-4 col-sm-4">
+            <h1>Votre catalogue</h1>
         </div>
-        <div class="col-lg-5 col-sm-5"></div>
+        <div class="col-lg-4 col-sm-4"></div>
     </div>
 </div>
     <div class="container">
@@ -30,26 +32,50 @@ $reponse = $bdd->query('SELECT * FROM catalogue');
 <?php
 
 // On affiche chaque entrée une à une
-while ($donnees = $reponse->fetch())
-{
+$donnees = $reponse->fetchAll();
+for ($i=0; $i<count($donnees);$i++){
     ?>
     <div class="col-lg-4 col-md-4 mb-4">
         <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="<?php echo $donnees['imageService']; ?>" alt="<?php echo $donnees['imageService']; ?>"></a>
+            <img class="card-img-top" src="<?php echo $donnees[$i]['imageService']; ?>" alt="<?php echo $donnees[$i]['imageService']; ?>">
             <div class="card-body">
                 <h4 class="card-title">
-                    <a href="#"><?php echo $donnees['nomService']; ?></a>
+                    <?php echo $donnees[$i]['nomService']; ?>
                 </h4>
-                <h5><?php echo $donnees['coutService']; ?> €</h5>
-                <p class="card-text">Description: <?php echo $donnees['detailService']; ?></p>
+                <h5><?php echo $donnees[$i]['coutService']; ?> €</h5>
+                <p class="card-text">Description: <?php echo $donnees[$i]['detailService']; ?></p>
             </div>
+            <form method="post" action="../classes/function.php">
+                <button type="submit" class="btn btn-info" name="serviceToUpdate" value="<?php echo $donnees[$i]['idService']; ?>">
+                    <i class="fa fa-cog" aria-hidden="true"></i> Modifier
+                </button>
+                <button type="submit" class="btn btn-danger" name="serviceToDelete" value="<?php echo $donnees[$i]['idService']; ?>">
+                    <i class="fa fa-times" aria-hidden="true"></i> Supprimer
+                </button>
+            </form>
         </div>
 
     </div>
     <?php
 }
 
+
 ?>
+        <div class="col-lg-4 col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="http://via.placeholder.com/200x200"></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                    </h4>
+                </div>
+                <form method="post" action="ajoutService.php">
+                    <button type="submit" class="btn btn-success" name="serviceToAdd" value="">
+                        <i class="fa fa-plus" aria-hidden="true"></i> Ajouter
+                    </button>
+                </form>
+            </div>
+
+        </div>
 </div>
     </div>
 <?php

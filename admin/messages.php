@@ -51,10 +51,12 @@ for ($i=0; $i<count($donnees);$i++){
         <div class="panel-footer">
             <form method="post" action="../classes/function.php">
                 <button class="btn btn-primary">
-                    <a href="mailto:<?php echo $donnees[$i]['mailExpediteur']; ?>" class="button">Répondre</a>
+                    <a href="mailto:<?php echo $donnees[$i]['mailExpediteur']; ?>" class="button">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i> Répondre
+                    </a>
                 </button>
-                <button type="submit" class="btn btn-danger" name="idToDelete" value="<?php echo $donnees[$i]['idMessage']; ?>">
-                    Supprimer
+                <button type="submit" class="btn btn-danger" name="messageToDelete" value="<?php echo $donnees[$i]['idMessage']; ?>">
+                    <i class="fa fa-times" aria-hidden="true"></i> Supprimer
                 </button>
             </form>
         </div>

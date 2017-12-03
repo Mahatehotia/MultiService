@@ -6,30 +6,13 @@
  * Time: 01:59
  */
 
-  if (isset($_POST['idToDelete'])) {
-      try {
-          $bdd = new PDO('mysql:host=localhost;dbname=ams;charset=utf8', 'tafacesi', 'tafacesi');
-
-
-          // sql to delete a record
-          $sql = "DELETE FROM messages WHERE idMessage=".$_POST['idToDelete'];
-
-          // use exec() because no results are returned
-          $bdd->exec($sql);
-          echo "<script type='text/javascript'>document.location.replace('../admin/messages.php');</script>";
-      } catch (PDOException $e) {
-          echo $sql . "<br>" . $e->getMessage();
-      }
-  }
-
-function supprimerMessage($id)
-{
+if (isset($_POST['messageToDelete'])) {
     try {
         $bdd = new PDO('mysql:host=localhost;dbname=ams;charset=utf8', 'tafacesi', 'tafacesi');
 
 
         // sql to delete a record
-        $sql = "DELETE FROM messages WHERE idMessage=".$id;
+        $sql = "DELETE FROM messages WHERE idMessage=".$_POST['messageToDelete'];
 
         // use exec() because no results are returned
         $bdd->exec($sql);
@@ -39,28 +22,20 @@ function supprimerMessage($id)
     }
 }
 
-function supprimerMessageSql($id){
-$servername = "localhost";
-$username = "tafacesi";
-$password = "tafacesi";
-$dbname = "ams";
+if (isset($_POST['serviceToDelete'])) {
+    try {
+        $bdd = new PDO('mysql:host=localhost;dbname=ams;charset=utf8', 'tafacesi', 'tafacesi');
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Erreur de connexion à la base de données: " . mysqli_connect_error());
+
+        // sql to delete a record
+        $sql = "DELETE FROM catalogue WHERE idService=".$_POST['serviceToDelete'];
+
+        // use exec() because no results are returned
+        $bdd->exec($sql);
+        echo "<script type='text/javascript'>document.location.replace('../admin/catalogue.php');</script>";
+    } catch (PDOException $e) {
+        echo $sql . "<br>" . $e->getMessage();
+    }
 }
 
-// sql to delete a record
-$sql = "DELETE FROM messages WHERE idMessage=".$id;
-
-if (mysqli_query($conn, $sql)) {
-    echo "admin/messages.php";
-} else {
-    echo "Erreur message non supprimé " . mysqli_error($conn);
-}
-
-mysqli_close($conn);
-}
 ?>
