@@ -66,7 +66,7 @@ include 'header.php';
 try
 {
 	// On se connecte à MySQL
-    $mysqli = new mysqli("localhost", "root", "root", "ams");
+    $mysqli = new mysqli("localhost", "tafacesi", "tafacesi", "ams");
 
     /* Vérification de la connexion */
     if (mysqli_connect_errno()) {

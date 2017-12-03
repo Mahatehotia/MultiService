@@ -37,15 +37,7 @@ for ($i=0; $i<count($donnees);$i++){
     <div class="panel panel-default">
         <div class="panel-heading">
             <h1>
-                <?php if ($donnees[$i]['typeMessage']==1){
-                    echo 'Devis';
-                }?>
-                <?php if ($donnees[$i]['typeMessage']==2){
-                    echo 'Recrutement';
-                }?>
-                <?php if ($donnees[$i]['typeMessage']==3){
-                    echo 'Autre';
-                }?>
+                <?php echo $donnees[$i]['objetMessage'];?>
             </h1>
         </div>
         <div class="panel-body">
@@ -57,12 +49,14 @@ for ($i=0; $i<count($donnees);$i++){
             </p>
         </div>
         <div class="panel-footer">
-            <button class="btn btn-primary" actio>
-                <a href="mailto:<?php echo $donnees[$i]['mailExpediteur']; ?>" class="button">Répondre</a>
-            </button>
-            <button class="btn btn-danger" onclick="alert('<?php  supprimerMessage($donnees[$i]['idMessage']);?>')">
-               Supprimer
-            </button>
+            <form method="post" action="../classes/function.php">
+                <button class="btn btn-primary">
+                    <a href="mailto:<?php echo $donnees[$i]['mailExpediteur']; ?>" class="button">Répondre</a>
+                </button>
+                <button type="submit" class="btn btn-danger" name="idToDelete" value="<?php echo $donnees[$i]['idMessage']; ?>">
+                    Supprimer
+                </button>
+            </form>
         </div>
     </div>
     </div>

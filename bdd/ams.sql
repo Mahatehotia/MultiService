@@ -8,9 +8,6 @@
 -- Version de PHP :  5.6.25
 
 
-DROP TABLE IF EXISTS ligne_commander;
-DROP TABLE IF EXISTS commandes;
-DROP TABLE IF EXISTS produits;
 DROP TABLE IF EXISTS utilisateurs;
 DROP TABLE IF EXISTS catalogue;
 DROP TABLE IF EXISTS messages;
@@ -35,8 +32,8 @@ CREATE TABLE `messages`(
   `idMessage` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `nomExpediteur` VARCHAR(50) NOT NULL,
   `prenomExpediteur` VARCHAR(50) NOT NULL,
-  `objetMessage` VARCHAR(50) NOT NULL,
   `mailExpediteur` VARCHAR(255) NOT NULL,
+  `objetMessage` VARCHAR(50) NOT NULL,
   `detailMessage` LONGTEXT NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -85,9 +82,14 @@ INSERT INTO `catalogue` (`idService`,`nomService`,`detailService`,`coutService`,
   (2,'Moyenne usine','nettoyage d\'une usine de 400m²',300.05,'../_images/moyenneusine.jpg'),
   (3,'Grande usine','nettoyage d\'une usine de 600m²',400.05,'../_images/grandeusine.jpg');
 
---
+INSERT INTO `messages` (`idMessage`,`nomExpediteur`,`prenomExpediteur`,`mailExpediteur`,`objetMessage`,`detailMessage`) VALUES
+  (1,'Ralijaona','Tiona','ralijaona.tiona@gmail.com','Devis','Bonjour je souhaite avoir un devis pour une entreprise de 200m² avec 50 machines industrielles à nettoyer. pouvez vous me faire un devis? Cordialement, Tiona R.'),
+  (2,'Dupont','Thomas','dupont.thomas@cesi.com','Recrutement','Bonjour je suis un étudiant et je voulais savoir si vous pouvez me prendre en stage? Cordialement, Thomas D.'),
+  (3,'Rodin','Patrick','patrick.rodin@gmail.com','Autre','Bonjour journaliste j\'aimerais faire un reportage sur votre société. Cordialement, Tiona R.');
 
---
+
+
+  --
 -- Index pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`

@@ -13,14 +13,15 @@ include 'header.php';
         <div class="col-lg-12">
             <h1>Bienvenue à AMS</h1>
             <h2>Solution de nettoyage industriel</h2>
-            <p>Bonjour et bienvenue dans votre société de Service de nettoyage indusmagasin Ouverture Prochaine - Boulanger Bourg en Bresse ; espace convivial de découverte, de démonstration et de conseils.
+            <p>Bonjour et bienvenue dans votre société de Service de nettoyage industriel.<br>
 
-            Retrouvez, dans votre magasin Boulanger situé à Bourg-en-Bresse , une large sélection de lave-linge, sèche-linge, lave-vaisselle, four, hotte, robot, aspirateur, TV, home-cinéma, PC, tablette, appareil photo, smartphone, et bien d'autres produits.
+                On vous propose le nettoyage complet de votre usine.<br>
 
-            Présentation des dernières nouveautés, accompagnement : vos conseillers de vente sont à votre disposition pour vous faire vivre pleinement la Happy Technologie dans votre magasin Ouverture Prochaine - Boulanger Bourg en Bresse !
+                Retrouvez, dans notre catalogue une large sélection de service, et bientôt une boutique fera son apparition.<br>
 
-            Rendez-vous vite dans votre magasin d'électroménager et multimédia à Bourg-en-Bresse !
-            Votre directeur de magasin Wilfried ANDRIEUX</p>
+                N'hésitez pas à nous contacter via la page de contact et on vous répondra le plus rapidement possible.<br>
+                Votre directeur de Cédric DUPONT.
+            </p>
         </div>
     </div>
     <div class="row">

@@ -2,7 +2,7 @@
 require_once 'classes/CUtilisateur.php';
 session_start();
 try {
-$connexion = new PDO('mysql:host=localhost;dbname=ams','root','root');
+$connexion = new PDO('mysql:host=localhost;dbname=ams','tafacesi','tafacesi');
 }
 catch (PDOException $e) {
 	echo 'Base de donnee hors service';
