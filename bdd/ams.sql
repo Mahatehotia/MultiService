@@ -33,9 +33,9 @@ SET time_zone = "+00:00";
 --
 CREATE TABLE `messages`(
   `idMessage` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `typeMessage` INT(11) NOT NULL,
   `nomExpediteur` VARCHAR(50) NOT NULL,
   `prenomExpediteur` VARCHAR(50) NOT NULL,
+  `objetMessage` VARCHAR(50) NOT NULL,
   `mailExpediteur` VARCHAR(255) NOT NULL,
   `detailMessage` LONGTEXT NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -78,13 +78,7 @@ INSERT INTO `utilisateurs` (`idUtilisateur`, `nomUtilisateur`, `prenomUtilisateu
 (1, 'Deniz', 'Ayhann', 'ayhann', 'ayhann', 'ayhann.deniz@viacesi.fr', '6 rue du chemin', '69120', 'Vaulx-En-Velin', 1),
 (2, 'Chassagne', 'Aurelie', 'aurelie', 'aurelie', 'aurelie.chassagne@viacesi.fr', '7 rue du chemin', '69100', 'Villeurbanne', 1);
 
---
--- Contenu de la table `messages`
-INSERT INTO `messages` (`idMessage`,`typeMessage`,`nomExpediteur`,`prenomExpediteur`,`mailExpediteur`,`detailMessage`) VALUES
-  (1,1,'Tiona','Ralijaona','tiona.ralijaona@gmail.com','Bonjour je souhaiterais faire une demande pour le nettoyage d\'une usine de 250 m² Merci Cordialement Tiona' ),
-  (2,2,'Thomas','Dupont','thomas.dupont@gmail.com','Bonjour je souhaiterais savoir si vous recruter? Merci Cordialement, Thomas D.'),
-  (3,3,'Nicolas','Marc','nicolas.m@gmail.com','Bonjour je souhaiterais avoir des renseignements sur vos services. Merci, Cordialement Nicolas M.');
---
+
 
 INSERT INTO `catalogue` (`idService`,`nomService`,`detailService`,`coutService`,`imageService`) VALUES
   (1,'Petite usine','nettoyage d\'une usine de 200m²',150.5,'../_images/petiteusine.jpg'),

@@ -7,7 +7,6 @@ include 'header.php';
             <div class="well well-sm">
                 <form class="form-horizontal" action="" method="post">
                     <fieldset>
-                        <legend class="text-center">Contactez nous</legend>
                         <legend class="text-center">Nous Contacter</legend>
 
                         <!-- Nom input-->
@@ -52,7 +51,7 @@ include 'header.php';
                         <!-- Form actions -->
                         <div class="form-group">
                             <div class="col-md-12 text-center">
-                                <button type="submit" name='envoimail' class="btn btn-primary btn-lg">Envoyer</button>
+                                <button type="submit" name='envoiMessage' class="btn btn-primary btn-lg">Envoyer</button>
                             </div>
                         </div>
                     </fieldset>
@@ -64,38 +63,46 @@ include 'header.php';
     </body>
 </html>
 <?php
+try
+{
+	// On se connecte à MySQL
+    $mysqli = new mysqli("localhost", "root", "root", "ams");
+
+    /* Vérification de la connexion */
+    if (mysqli_connect_errno()) {
+        printf("Échec de la connexion : %s\n", mysqli_connect_error());
+        exit();
+};
+}
+catch(Exception $e)
+{
+	// En cas d'erreur, on affiche un message et on arrête tout
+        die('Erreur : '.$e->getMessage());
+}
 
                                 // Si il y a eu un clic sur le bouton "Envoyer"
                                 
-                                if(isset($_POST['envoimail'])) {                                
-                                $nom     = trim($_POST['nom']);
-                                $prenom     = trim($_POST['prenom']); // Récupération des informations contenues dans les champs
-	                            $email   = trim($_POST['email']);
-	                            $objet   = $_POST['objet'];
-	                            $corps = $_POST['corps'];
+                                if(isset($_POST['envoiMessage'])) {                                
+                                $nom=mysqli_real_escape_string($mysqli, trim($_POST['nom']));
+                                $prenom=mysqli_real_escape_string($mysqli, trim($_POST['prenom'])); // Récupération des informations contenues dans les champs
+	                            $email=mysqli_real_escape_string($mysqli, trim($_POST['email']));
+	                            $objet=mysqli_real_escape_string($mysqli, $_POST['objet']);
+	                            $corps=mysqli_real_escape_string($mysqli, $_POST['corps']);
                                 
                                 
-                                $headers =  'MIME-Version: 1.0' . "\r\n"; 
-                                $headers .= 'From: MultiServices <multiservices@gmail.com>' . "\r\n";
-                                $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
+                                if(($nom != '') && ($prenom != '') && ($email != '') && ($objet != '') && ($corps != '')) {
 
-                                if (($nom != '') && ($prenom != '') && ($email != '') && ($objet != '') && ($corps != '')) {
-
-                                if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                                    
-                                    $message = "Content-Type: text/plain; charset=\"ISO-8859-1\""."\n";
-                                    $message.= "Content-Transfer-Encoding: 8bit"."\n";
-                                    
-                                    if(@mail($email,$objet,$corps, $headers)){
-                                    echo '<script>alert("Mail envoyé avec succès");</script>';
-                                }else{
-                                    echo '<script>alert("Le mail n\'a pas pu être envoyé");</script>';
+                                    $resultatquery = $mysqli->query("INSERT INTO messages(nomExpediteur, prenomExpediteur, objetMessage, mailExpediteur, detailMessage) 
+                                    VALUES ('$nom', '$prenom', '$objet', '$email', '$corps')");
+                                    if($resultatquery){
+                                        echo '<script>alert("Formulaire envoyé avec succès");</script>';
+                                    }else{
+                                        echo '<script>alert("Le formulaire n\'a pas pu être envoyé");</script>';
+                                    }
+                                }else {
+                                    echo '<script>alert("Veuillez compléter tous les champs du formulaire");</script>';
                                 }
-                                } else {
-                                    echo 'Cet email a un format non adapté.';
-                                }
-                                }
-                                }
+                            }
                                 include 'footer.php';
                             
                                 
