@@ -14,3 +14,8 @@
 textarea{
     resize: none;
 }
+
+a.button{
+    text-decoration: none;
+    color: white;
+}

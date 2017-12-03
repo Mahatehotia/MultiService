@@ -16,7 +16,7 @@ $requ = $connexion->query("SELECT * FROM utilisateurs WHERE loginUtilisateur =\"
 		
 		$_SESSION['utilisateur'] = new CUtilisateur();
 		$_SESSION['utilisateur']->connexion($res['idUtilisateur'],$res['nomUtilisateur'],$res['prenomUtilisateur'],$res['loginUtilisateur'],$res['mdpUtilisateur'],$res['mailUtilisateur'],$res['adresseUtilisateur'],$res['cpUtilisateur'],$res['villeUtilisateur'],$res['roleUtilisateur']);
-		header('location:/MultiService/html/accueil.php');
+		header('location:/MultiService/admin/accueil.php');
 
 	}
 	else

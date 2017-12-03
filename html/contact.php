@@ -1,14 +1,15 @@
 <?php
 require('../_includes/verification.php');
+require ('../classes/function.php');
 include 'header.php';
 ?>
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="well well-sm">
-                <form class="form-horizontal" action="" method="post">
+                <form class="form-horizontal" action="sendMessage()" method="post">
                     <fieldset>
-                        <legend class="text-center">Contacter nous</legend>
+                        <legend class="text-center">Contactez nous</legend>
 
                         <!-- Nom input-->
                         <div class="form-group">
