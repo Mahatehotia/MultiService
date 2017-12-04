@@ -14,12 +14,9 @@
                 <div class="col-sm-5">
                 </div>
                 <div class="col-sm-2">
-                    <i class="fa fa-facebook-official fa-2x"></i>
-                    <i class="fa fa-instagram fa-2x"></i>
-                    <i class="fa fa-snapchat fa-2x"></i>
-                    <i class="fa fa-pinterest-p fa-2x"></i>
-                    <i class="fa fa-twitter fa-2x"></i>
-                    <i class="fa fa-linkedin fa-2x"></i>
+                    <a href="https://www.facebook.com/Atout-Multi-Services-199406543566735/"><i class="fa fa-facebook-official fa-2x"></i></a>
+                    <a href="https://www.instagram.com/amultiservicescesi/?hl=fr"><i class="fa fa-instagram fa-2x"></i></a>
+                    <a href="https://twitter.com/ams72199830?s=09"><i class="fa fa-twitter fa-2x"></i></a>
                 </div>
                 <div class="col-sm-5">
                 </div>
