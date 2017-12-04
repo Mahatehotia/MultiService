@@ -28,7 +28,7 @@ include 'header.php';
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="email">Votre Email</label>
                             <div class="col-md-9">
-                                <input id="email" name="email" type="text" placeholder="Votre mail" required>
+                                <input id="email" name="email" type="email" placeholder="Votre mail" required>
                             </div>
                         </div>
 
