@@ -51,7 +51,7 @@ for ($i=0; $i<count($donnees);$i++){
         <div class="panel-footer">
             <form method="post" action="../classes/function.php">
                 <button class="btn btn-primary">
-                    <a href="mailto:<?php echo $donnees[$i]['mailExpediteur']; ?>" class="button">
+                    <a href="mailto:<?php echo $donnees[$i]['mailExpediteur']; ?>?subject=<?php echo $donnees[$i]['objetMessage'] . " [AMS]"; ?>" class="button">
                         <i class="fa fa-envelope-o" aria-hidden="true"></i> Répondre
                     </a>
                 </button>
