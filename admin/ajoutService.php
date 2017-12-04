@@ -33,7 +33,7 @@ include 'header.php';
                         </div>
 
                         <!-- Image input-->
-                        <div class="form-group hidden">
+                        <div class="form-group">
                             <label class="col-md-3 control-label" for="imageService">Image</label>
                             <div class="col-md-9">
                                 <input id="imageService" name="imageService" type="file" required>
