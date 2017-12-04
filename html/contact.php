@@ -92,8 +92,8 @@ catch(Exception $e)
                                 
                                 if(($nom != '') && ($prenom != '') && ($email != '') && ($objet != '') && ($corps != '')) {
 
-                                    $resultatquery = $mysqli->query("INSERT INTO messages(nomExpediteur, prenomExpediteur, objetMessage, mailExpediteur, detailMessage) 
-                                    VALUES ('$nom', '$prenom', '$objet', '$email', '$corps')");
+                                    $resultatquery = $mysqli->query("INSERT INTO messages(nomExpediteur, prenomExpediteur, mailExpediteur, objetMessage, detailMessage) 
+                                    VALUES ('$nom', '$prenom', '$email', '$objet', '$corps')");
                                     if($resultatquery){
                                         echo '<script>alert("Formulaire envoyé avec succès");</script>';
                                     }else{
