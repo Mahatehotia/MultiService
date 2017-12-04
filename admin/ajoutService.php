@@ -13,7 +13,7 @@ include 'header.php';
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="well well-sm">
-                <form class="form-horizontal" action="" method="post">
+                <form class="form-horizontal" action="../classes/function.php" method="post">
                     <fieldset>
                         <legend class="text-center">Ajout d'un service</legend>
 

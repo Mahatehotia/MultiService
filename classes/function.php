@@ -38,4 +38,24 @@ if (isset($_POST['serviceToDelete'])) {
     }
 }
 
+if (isset($_POST['serviceToAdd'])) {
+    try {
+        $bdd = new PDO('mysql:host=localhost;dbname=ams;charset=utf8', 'tafacesi', 'tafacesi');
+
+        $nomService = '';
+        $detailService = $_POST['detailService'];
+        $coutService = '';
+        $imageService = '';
+
+        // sql to delete a record
+        $sql = "DELETE FROM catalogue WHERE idService=".$_POST['serviceToDelete'];
+
+        // use exec() because no results are returned
+        $bdd->exec($sql);
+        echo "<script type='text/javascript'>document.location.replace('../admin/catalogue.php');</script>";
+    } catch (PDOException $e) {
+        echo $sql . "<br>" . $e->getMessage();
+    }
+}
+
 ?>
