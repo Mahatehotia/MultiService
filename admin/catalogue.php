@@ -69,7 +69,7 @@ for ($i=0; $i<count($donnees);$i++){
                     </h4>
                 </div>
                 <form method="post" action="ajoutService.php">
-                    <button type="submit" class="btn btn-success" name="serviceToAdd" value="">
+                    <button type="submit" class="btn btn-success" value="">
                         <i class="fa fa-plus" aria-hidden="true"></i> Ajouter
                     </button>
                 </form>

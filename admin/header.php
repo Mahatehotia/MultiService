@@ -3,6 +3,7 @@ include '../_includes/head.php';
 require_once'../_includes/verification.php';
 ?>
 <body>
+<div class="container">
 <div class="background">
     <nav class="navbar navbar-light navBg">
         <div class="container-fluid">
@@ -25,4 +26,5 @@ require_once'../_includes/verification.php';
             </ul>
         </div>
     </nav>
+</div>
 </div>
