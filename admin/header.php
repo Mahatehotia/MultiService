@@ -8,7 +8,7 @@ require_once'../_includes/verification.php';
     <nav class="navbar navbar-light navBg">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/MultiService/admin/accueil.php">AMS</a>
+                <a  href="/MultiService/admin/accueil.php"><img class="logo" src="/MultiService/_images/logo.png" alt="Logo">AMS</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="../deconnexion.php"><i class="fa fa-sign-out" aria-hidden="true"></i></span> Déconnexion</a></li>
