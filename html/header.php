@@ -9,7 +9,6 @@ require_once'../_includes/verification.php';
         <div class="container-fluid">
             <div class="navbar-header">
                 <a  href="/MultiService/html/accueil.php"><img src="/MultiService/_images/logo.png" alt="Logo"></a>
-            
             </div>
             <ul class="nav navbar-nav navbar-right">
                <?php
