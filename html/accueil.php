@@ -36,7 +36,7 @@ include 'header.php';
     <div class="row">
         <div class="col-sm-3">
             <img src="/MultiService/_images/Cédric.png">
-            <h2>Cédric Dupont</h2>
+            <h2>Jérôme Devigne</h2>
             <p>Directeur</p>
         </div>
         <div class="col-sm-3">
