@@ -24,10 +24,18 @@
                 <div class="col-sm-5">
                 </div>
             </div>
+			<div class="row">
+                <div class="col-sm-5">
+                </div>
+                <div class="col-sm-2">
+                    88 Rue Des Tilleuls MARCILLEUX 01150 SAINT VULBAS
+                </div>
+                <div class="col-sm-5">
+                </div>
+            </div>
             </div>
         </div>
     </div>
-	88 Rue Des Tilleuls MARCILLEUX 01150 SAINT VULBAS
 </footer>
 
 </body>
