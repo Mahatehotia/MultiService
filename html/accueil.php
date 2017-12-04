@@ -35,22 +35,22 @@ include 'header.php';
     </div>
     <div class="row">
         <div class="col-sm-3">
-            <img src="/MultiService/_images/Cédric.png">
+            <img src="/MultiService/_images/Cédric.png" alt="Jérôme, Directeur">
             <h2>Jérôme Devigne</h2>
             <p>Directeur</p>
         </div>
         <div class="col-sm-3">
-            <img src="/MultiService/_images/Alexandra.png">
+            <img src="/MultiService/_images/Alexandra.png" alt="Alexandra, Comptable">
             <h2>Alexandra Miller</h2>
             <p>Comptable</p>
         </div>
         <div class="col-sm-3">
-            <img src="/MultiService/_images/Maria.png">
+            <img src="/MultiService/_images/Maria.png" alt="Maria, Commercial">
             <h2>Maria Santos</h2>
             <p>Commercial</p>
         </div>
         <div class="col-sm-3">
-            <img src="/MultiService/_images/Jérémie.png">
+            <img src="/MultiService/_images/Jérémie.png" alt="Jérémie, Secrétaire">
             <h2>Jérémie Martin</h2>
             <p>Secrétaire</p>
         </div>
