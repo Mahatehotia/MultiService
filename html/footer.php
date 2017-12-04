@@ -8,6 +8,7 @@
 
 ?>
 <footer>
+	<hr>
     <div class="container">
         <div class="row">
             <div class="row">
@@ -33,6 +34,7 @@
             </div>
         </div>
     </div>
+	<p> &copy;  Copyright TAFA CESI 2017</p>
 </footer>
 
 </body>
