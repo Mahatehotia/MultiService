@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 <?php 
 require_once 'head.php'; //inclut les liens vers les bibliotheque
 require_once '../classes/CUtilisateur.php';
