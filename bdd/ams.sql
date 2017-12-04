@@ -73,7 +73,8 @@ CREATE TABLE `utilisateurs` (
 
 INSERT INTO `utilisateurs` (`idUtilisateur`, `nomUtilisateur`, `prenomUtilisateur`, `loginUtilisateur`, `mdpUtilisateur`, `mailUtilisateur`, `adresseUtilisateur`, `cpUtilisateur`, `villeUtilisateur`, `roleUtilisateur`) VALUES
 (1, 'Deniz', 'Ayhann', 'ayhann', 'ayhann', 'ayhann.deniz@viacesi.fr', '6 rue du chemin', '69120', 'Vaulx-En-Velin', 1),
-(2, 'Chassagne', 'Aurelie', 'aurelie', 'aurelie', 'aurelie.chassagne@viacesi.fr', '7 rue du chemin', '69100', 'Villeurbanne', 1);
+(2, 'Chassagne', 'Aurelie', 'aurelie', 'aurelie', 'aurelie.chassagne@viacesi.fr', '7 rue du chemin', '69100', 'Villeurbanne', 1),
+(3, 'Meddour', 'Fedia', 'fadia', 'fadia', 'fadia.meddour@gmail.com', '872, route de genève', '01360', 'Béligneux', 1);
 
 
 
