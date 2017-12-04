@@ -4,6 +4,7 @@
     <meta http-equiv="refresh" content="3;url=html/connexion.php" />
 <title>Erreur login</title>
 
+<source src="_images/background.jpg" type="">
 <script type="text/javascript">
 
 function rebour(tps)
