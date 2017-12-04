@@ -37,7 +37,7 @@ for ($i=0; $i<count($donnees);$i++){
     ?>
     <div class="col-lg-4 col-md-4 mb-4">
         <div class="card h-100">
-            <img class="card-img-top" src="<?php echo $donnees[$i]['imageService']; ?>" alt="<?php echo $donnees[$i]['imageService']; ?>">
+            <img class="card-img-top" src="<?php echo $donnees[$i]['imageService']; ?>" alt="<?php echo $donnees[$i]['nomService']; ?>">
             <div class="card-body">
                 <h4 class="card-title">
                     <?php echo $donnees[$i]['nomService']; ?>
