@@ -8,7 +8,8 @@ require_once'../_includes/verification.php';
     <nav class="navbar navbar-light navBg">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/MultiService/html/accueil.php">AMS</a>
+                <a  href="/MultiService/html/accueil.php"><img src="/MultiService/_images/logo.png" alt="Logo"></a>
+            
             </div>
             <ul class="nav navbar-nav navbar-right">
                <?php
